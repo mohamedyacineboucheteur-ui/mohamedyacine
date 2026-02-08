@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد ياسين | محلل أمن سيبراني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid #ffc107;
+            color: #ffc107;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #00d4ff;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .card p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: #00d4ff;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-right: 4px solid #00d4ff;
+        }
+
+        .timeline-item h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .date {
+            color: #ffc107;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-btn:hover {
+            background: #00d4ff;
+            color: #0f0c29;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="profile-img">🛡️</div>
+            <h1>محمد ياسين</h1>
+            <p class="title">طالب أمن سيبراني | محلل SOC</p>
+            <div class="cert-badge">
+                🏆 حاصل على شهادة Google Cybersecurity
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section>
+        <div class="container">
+            <h2>نبذة عني</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #b0b0b0; font-size: 1.1rem;">
+                طالب متحمس في مجال الأمن السيبراني، أكملت برنامج Google Cybersecurity Certificate 
+                وأمتلك خبرة عملية في تحليل الشبكات، اكتشاف التهديدات، والاستجابة للحوادث. 
+                أبحث عن فرصة للانضمام إلى فريق SOC كمحلل أمن سيبراني.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <div class="container">
+            <h2>المهارات التقنية</h2>
+            <div class="skills-list">
+                <span class="skill-tag">🔍 Wireshark</span>
+                <span class="skill-tag">🛡️ Splunk</span>
+                <span class="skill-tag">☁️ Cloud Security</span>
+                <span class="skill-tag">🐧 Linux</span>
+                <span class="skill-tag">🪟 Windows Security</span>
+                <span class="skill-tag">🌐 TCP/IP</span>
+                <span class="skill-tag">🔥 Firewalls</span>
+                <span class="skill-tag">📊 SIEM</span>
+                <span class="skill-tag">🐍 Python</span>
+                <span class="skill-tag">⚠️ Incident Response</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Journey -->
+    <section>
+        <div class="container">
+            <h2>رحلتي التعليمية</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>☁️ Cloud Computing & Networks</h3>
+                    <p class="date">يناير 2026</p>
+                    <p>فهم أساسيات الحوسبة السحابية، شبكات السحابة، وأمن البنية التحتية السحابية.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>🛡️ Google Cybersecurity Certificate</h3>
+                    <p class="date">2025 - 2026</p>
+                    <p>إكمال 5 وحدات تعليمية تشمل الأمن السيبراني الأساسي، شبكات الكمبيوتر، وأدوات SOC.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>🔧 TryHackMe & Hack The Box</h3>
+                    <p class="date">مستمر</p>
+                    <p>تدريب عملي على اختبار الاختراق وتحليل الثغرات الأمنية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+        <div class="container">
+            <h2>المشاريع العملية</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>تحليل حركة الشبكة</h3>
+                    <p>استخدام Wireshark لالتقاط وتحليل حركة الشبكة، اكتشاف الأنشطة المشبوهة وتحليل البروتوكولات.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>أمن السحابة</h3>
+                    <p>تكوين سياسات الأمان في AWS، إدارة الهويات والوصول (IAM)، ومراقبة السجلات.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>تحليل السجلات بـ Splunk</h3>
+                    <p>إنشاء لوحات معلومات لمراقبة الأمان، كتابة استعلامات SPL للكشف عن التهديدات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <div class="contact-links">
+                <a href="mailto:mohamedyacineboucheteur@gmail.com" class="contact-btn">
+                    📧 البريد الإلكتروني
+                </a>
+                <a href="https://www.linkedin.com/in/mohamedyacine-boucheteur-2bb433379" class="contact-btn">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/mohamedyacineboucheteur-ui" class="contact-btn">
+                    💻 GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 محمد ياسين | طالب أمن سيبراني</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">بنيت باستخدام HTML & CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
